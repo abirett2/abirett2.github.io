@@ -53,4 +53,10 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
+
+// Remove Preloader After All Data Loades
+document.querySelector(".preloader").classList.add("opacity-0");
+setTimeout(function () {
+  document.querySelector(".preloader").style.display = "none";
+}, 1000);
