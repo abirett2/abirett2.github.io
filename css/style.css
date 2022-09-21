@@ -382,6 +382,111 @@ img {
   transform: scale(1.1);
 }
 
+/* ==== Portfolio Item ==== */
+.portfolio-item {
+  /* height: 260px; */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 18px;
+}
+
+.portfolio-item .thumb {
+  overflow: hidden;
+}
+
+.portfolio-item .details {
+  color: #fff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.portfolio-item .details h4 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 0 10px;
+  padding: 0 20px;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  position: absolute;
+  top: 60px;
+}
+
+.portfolio-item .details span.term {
+  color: #fff;
+  background: dodgerblue;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 14px;
+  opacity: 0;
+  display: inline-block;
+  padding: 3px 10px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  -webkit-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  transform: translateY(-40px);
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  -o-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.portfolio-item .details .more-button {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  background: dodgerblue;
+  border-radius: 100%;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item .mask {
+  background: #18191a;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .mask {
+  opacity: 0.8;
+}
+
+.portfolio-item:hover .details h4,
+.portfolio-item:hover .details span {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.portfolio-item:hover .details .more-button {
+  opacity: 1;
+}
+
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
