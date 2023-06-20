@@ -60,3 +60,13 @@ document.querySelector(".preloader").classList.add("opacity-0");
 setTimeout(function () {
   document.querySelector(".preloader").style.display = "none";
 }, 1000);
+
+
+// Get Age
+const age = new Date().getFullYear() - 2000;
+document.getElementById('age').innerHTML = age;
+
+// Get Year
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("year").innerHTML = year;
